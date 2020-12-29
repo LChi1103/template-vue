@@ -1,0 +1,61 @@
+#app {
+  font-family: Arial, '宋体', 'Avenir', Helvetica, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-size: 14px;
+}
+
+/* 试用：scroll-con，来让滚动条获得统一样式 */
+.scroll-con::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+.scroll-con::-webkit-scrollbar-thumb{
+ border-radius: 5px;
+ box-shadow: inset 0 0 2px #fff;
+ background: #ddd;
+}
+.scroll-con::-webkit-scrollbar-track{
+ border-radius: 0;
+ box-shadow: inset 0 0 2px #fff;
+}
+
+/* 状态的样式 */
+.status-primary, .status-proceed, .status-info {
+  padding-left: 15px;
+  position: relative;
+}
+.status-primary {
+  color: #59D3A1;
+}
+.status-danger {
+  color: #ff0202;
+}
+.status-proceed {
+  color: #F59A23;
+}
+.status-info {
+  color: #B1B1B3;
+}
+.status-primary:before, .status-danger:before, .status-proceed:before, .status-info:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+}
+.status-primary:before {
+  background-color: #59D3A1;
+}
+.status-danger:before {
+  background-color: #ff0202;
+}
+.status-proceed:before {
+  background-color: #F59A23;
+}
+.status-info:before {
+  background-color: #B1B1B3;
+}
